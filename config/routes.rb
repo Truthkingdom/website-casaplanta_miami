@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  mount RailsAdmin::Engine => '/cp-admin', as: 'rails_admin'
   root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
