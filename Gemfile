@@ -68,4 +68,7 @@ group :development, :test do
   gem 'spring'
 end
 
+# Has Many Belongs to Many Generator
+gem 'habtm_generator', :group => :development
+
 ruby '2.2.2'
