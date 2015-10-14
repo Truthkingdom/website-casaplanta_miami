@@ -1,5 +1,7 @@
-class Media::Image < ActiveRecord::Base
-  # has_and_belongs_to_many :blog_posts, class_name: "Blog::Post"
+class MediaLibrary::Image < ActiveRecord::Base
+  belongs_to :media_library
+
+  before_create :check_name
 
   has_attached_file :picture,
   :path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
@@ -22,5 +24,15 @@ class Media::Image < ActiveRecord::Base
   }
 
   validates_attachment_content_type :picture, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
+
+  private
+
+  def check_name
+    if self.name.blank?
+      self.name = self.picture_file_name.parameterize
+    end
+  end
+
 
 end
