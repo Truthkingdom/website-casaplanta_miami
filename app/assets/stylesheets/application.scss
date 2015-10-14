@@ -7,3 +7,53 @@
 @import "icons-fonts";
 @import "style";
 @import "animate.min";
+
+
+// Global
+  .tcenter {text-align: center;}
+
+// Header
+  .affix-top .navbar .nav > li > a {color:white !important;}
+  .header-1.affix-top #main-menu .navbar .nav > li.current > a {border-bottom: 2px solid white !important;}
+
+  // Logo
+    .logo-wht {
+      display: block;
+      padding: 33px 0 25px 0;
+      -webkit-transition: all .4s ease 0s;
+      transition: all .4s ease 0s;
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+    .logo-2 {
+      @media (max-width: 1024px) {
+        background-color: white;
+      }
+    }
+    .header-1.affix-top .white-logo {display: block;}
+    .header-1.affix .white-logo {display: none;}
+    .header-1.affix-top .main-logo {display: none;}
+    .header-1.affix .main-logo {display: block;}
+
+
+// Homepage
+  // Slider
+    .tp-caption.dark-light-32, .tp-caption.dark-light-100, .tp-caption.dark-black-100, .scroll-down {color: #FFFFFF;}
+    .slider-1-cap-line {background: white;}
+
+  // Company Taglines
+    .fes2-img {
+      background: image-url("home-tagline1.jpg") 50% 50% no-repeat;
+      background-size: cover;
+    }
+    .fes3-img {
+      background: image-url("home-tagline2.jpg") 50% 50% no-repeat;
+      background-size: cover;
+    }
+
+  // Services
+    .services .fes4-title-cont {padding-left: 0px;}
+
+  // Portfolio
+    .portfolio {padding-top:40px;padding-bottom: 40px;}

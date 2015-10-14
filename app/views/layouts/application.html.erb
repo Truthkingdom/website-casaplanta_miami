@@ -24,10 +24,19 @@
 
 </head>
 <body>
+  <div id="wrap" class="boxed ">
+    <div class="grey-bg">
+      <%= render 'layouts/loader' %>
+      <%= render 'layouts/header' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </div>
 
-  <%= yield %>
 
-
+  <p id="back-top">
+    <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
+  </p>
   <%= javascript_include_tag 'application-btm' %>
 
 </body>
